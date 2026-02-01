@@ -1,3 +1,6 @@
+![CI](https://github.com/Umarani-2607/backend-service/actions/workflows/ci.yml/badge.svg)
+
+
 # Backend Service
 
 A backend API service built to demonstrate **Python development,
