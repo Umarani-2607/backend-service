@@ -24,6 +24,8 @@ jobs:
           pip install pytest httpx
 
       - name: Run tests
+        env:
+          RUN_MIGRATIONS: "false"
         run: pytest
 
       - name: Build Docker image

@@ -4,7 +4,10 @@ from sqlalchemy.orm import Session
 from .database import SessionLocal, engine
 from . import models, schemas
 
-models.Base.metadata.create_all(bind=engine)
+import os
+
+if os.getenv("RUN_MIGRATIONS", "true") == "true":
+    models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Python API with PostgreSQL")
 
